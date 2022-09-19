@@ -1,0 +1,61 @@
+header, main, footer{
+    min-width: 855px;
+}
+
+header .container, main .container, footer .container {
+    max-width: 855px;
+    margin: auto;
+    
+}
+body{
+    background: #f9e933;
+}
+
+header{
+    background: white;
+    overflow: auto;
+}
+
+header h1 {
+    float:  left;
+    width: 570px;
+}
+
+header nav{
+    float: right;
+    width: 285px;
+}
+
+main{
+    background: white;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+footer .contact{
+    float: left;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+footer .sitemap {
+    float:  right;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* h1, h2, h3, h4 {
+    font-family: 'Ubuntu', sans-serif;
+} */
+
+.tabs a span {
+    display: inline-block;
+    border-radius: 5px 5px 0 0;
+    width: 100px;
+    margin-right: 10px;
+    text-align: center;
+    background: #ddd;
+    padding: 5px;
+
+}
+/* para aba ativa */
+.tabs a span.active{
+    background: plum;
+}
