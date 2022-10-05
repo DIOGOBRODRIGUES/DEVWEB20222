@@ -1,0 +1,22 @@
+[
+    { 
+        "tag" : "shopping",
+        "tarefas"  : [ "fazer a feira", "ir ao pet" ]
+    },
+    { 
+        "description" : "levar o cachorro pra passear",
+        "tags"  : [ "diversão", "animais" ]
+    },
+    {
+        "description" : "projeto de dev Web",
+        "tags"  : [ "estudo", "trabalho" ]
+    },
+    { 
+        "description" : "Terminar de ler o livro",
+        "tags"  : [ "lazer" ]
+    },
+    { 
+        "description" : "pagar a conta de telefone",
+        "tags"  : [ "contas" ]
+    }
+]

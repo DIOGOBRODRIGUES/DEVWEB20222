@@ -1,10 +1,7 @@
-var main = function () {
-    var toDos = [
-        "Fazer feira",
-        "levar o cachorro pra passear",
-        "projeto de dev Web",
-        "Terminar de ler o livro",
-        "pagar a conta de telefone"];
+var main = function (toDoObjects) {
+    var toDos = toDoObjects.map(function(toDo){
+        return toDo.description;
+    });
 
     $(".tabs a span").toArray().forEach(function (element) {
         var $element = $(element);
@@ -35,8 +32,24 @@ var main = function () {
                 });
             } 
 
-            
+            else if ($element.parent().is(":nth-child(3)")) {
+                // oldest first, so we go through the array forwards
+                
+                });
+            } 
+            else if ($element.parent().is(":nth-child(4)")) {
+                $input = $("<input>");
+                $button = $("<button>").text("+");
 
+                $button.on("click", function (){
+                    if($input.val() !== "") {
+                      toDos.push($input.val());
+                      $input.val("");
+                    }
+                });
+
+                $content = $("<div>").append($input).append($button);
+                }
             $("main .content").append($content);
 
             return false;
@@ -46,4 +59,11 @@ var main = function () {
     $(".tabs a:first-child span").trigger("click");
 };
 
-$(document).ready(main);
+$(document).ready(function (){
+    $.getJSON("todos.json", function(toDoObjects){
+        main(toDoObjects);
+    });
+});
+    
+    
+   
